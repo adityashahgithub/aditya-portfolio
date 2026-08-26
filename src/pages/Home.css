@@ -1,5 +1,5 @@
 /* =========================================
-   APP
+   MULTI-PAGE PORTFOLIO — HOME / LANDING PAGE
 ========================================= */
 
 .app {
@@ -8,18 +8,14 @@
   background: #f7f9fc;
 }
 
-
 /* =========================================
    LANDING PAGE
 ========================================= */
 
 .landing-page {
   position: relative;
-
   min-height: calc(100vh - 91px);
-
   padding: 80px 5% 50px;
-
   overflow: hidden;
 
   display: flex;
@@ -27,14 +23,10 @@
   justify-content: center;
 }
 
-
-/* =========================================
-   BACKGROUND GLOWS
-========================================= */
+/* BACKGROUND GLOW */
 
 .landing-page::before {
   content: "";
-
   position: absolute;
 
   width: 600px;
@@ -54,7 +46,6 @@
 
 .landing-page::after {
   content: "";
-
   position: absolute;
 
   width: 450px;
@@ -72,9 +63,8 @@
   pointer-events: none;
 }
 
-
 /* =========================================
-   HERO CONTENT
+   MAIN CONTENT
 ========================================= */
 
 .landing-content {
@@ -86,7 +76,6 @@
 
   margin: 0 auto;
 }
-
 
 /* =========================================
    AVAILABILITY BADGE
@@ -101,15 +90,12 @@
   padding: 9px 14px;
 
   color: #2563eb;
-
   background: rgba(37, 99, 235, 0.08);
-
   border: 1px solid rgba(37, 99, 235, 0.12);
   border-radius: 999px;
 
   font-size: 0.72rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
 }
 
@@ -120,12 +106,10 @@
   height: 7px;
 
   background: #22c55e;
-
   border-radius: 50%;
 
   box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.1);
 }
-
 
 /* =========================================
    HERO TITLE
@@ -133,17 +117,18 @@
 
 .landing-content h1 {
   max-width: 900px;
-
   margin: 0;
 
   color: #172033;
 
-  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  /*
+    Reduced maximum size so the text
+    doesn't become too huge on large screens
+  */
+  font-size: clamp(3.4rem, 7vw, 6.5rem);
 
   font-weight: 800;
-
   line-height: 0.98;
-
   letter-spacing: -0.065em;
 }
 
@@ -151,23 +136,18 @@
   color: #2563eb;
 }
 
-
 /* =========================================
-   DESCRIPTION
+   HERO DESCRIPTION
 ========================================= */
 
 .landing-description {
   max-width: 650px;
-
   margin: 30px 0 0;
 
   color: #667085;
-
   font-size: clamp(1rem, 1.5vw, 1.15rem);
-
   line-height: 1.8;
 }
-
 
 /* =========================================
    LOCATION
@@ -176,13 +156,11 @@
 .landing-location {
   display: inline-flex;
   align-items: center;
-
   gap: 10px;
 
   margin-top: 20px;
 
   color: #7b8798;
-
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -194,21 +172,18 @@
   flex-shrink: 0;
 
   border-radius: 50%;
-
   background: #22c55e;
 
   box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.1);
 }
 
-
 /* =========================================
-   ACTION BUTTONS
+   BUTTONS
 ========================================= */
 
 .landing-actions {
   display: flex;
   flex-wrap: wrap;
-
   gap: 14px;
 
   margin-top: 34px;
@@ -219,11 +194,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 10px;
 
   min-height: 52px;
-
   padding: 0 22px;
 
   border-radius: 14px;
@@ -233,20 +206,11 @@
 
   text-decoration: none;
 
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: all 0.25s ease;
 }
-
-
-/* PRIMARY BUTTON */
 
 .primary-button {
   color: #ffffff;
-
   background: #2563eb;
 
   box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
@@ -254,39 +218,13 @@
 
 .primary-button:hover {
   transform: translateY(-3px);
-
   background: #1d4ed8;
 
   box-shadow: 0 16px 30px rgba(37, 99, 235, 0.28);
 }
 
-
-/* SVG BUTTON ARROW */
-
-.button-arrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 20px;
-  height: 20px;
-
-  flex-shrink: 0;
-}
-
-.button-arrow svg {
-  display: block;
-
-  width: 19px;
-  height: 19px;
-}
-
-
-/* SECONDARY BUTTON */
-
 .secondary-button {
   color: #172033;
-
   background: #ffffff;
 
   border: 1px solid #dce3ee;
@@ -296,19 +234,34 @@
   transform: translateY(-3px);
 
   border-color: #2563eb;
-
   color: #2563eb;
 }
 
+/* SVG ARROW INSIDE PRIMARY BUTTON */
+
+.primary-button .card-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  height: 18px;
+}
+
+.primary-button .card-arrow svg {
+  width: 18px;
+  height: 18px;
+
+  display: block;
+}
 
 /* =========================================
-   STATS
+   LANDING STATS
 ========================================= */
 
 .landing-stats {
   display: flex;
   flex-wrap: wrap;
-
   gap: 18px;
 
   margin-top: 52px;
@@ -316,14 +269,12 @@
 
 .landing-stats > div {
   min-width: 130px;
-
   padding-right: 28px;
 
   border-right: 1px solid #dbe3ee;
 
   display: flex;
   flex-direction: column;
-
   gap: 4px;
 }
 
@@ -345,9 +296,8 @@
   font-weight: 600;
 }
 
-
 /* =========================================
-   PREVIEW CARDS CONTAINER
+   PREVIEW CARDS
 ========================================= */
 
 .landing-preview {
@@ -361,39 +311,37 @@
 
   display: grid;
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /*
+    DEFAULT DESKTOP:
+    4 cards in one row
+  */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
   gap: 20px;
 }
 
-
-/* =========================================
-   PREVIEW CARD
-========================================= */
+/* CARD */
 
 .preview-card {
   position: relative;
+
+  width: 100%;
+  min-height: 300px;
+  padding: 26px;
+
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 
-  width: 100%;
-  min-height: 300px;
-
-  padding: 26px;
-
-  box-sizing: border-box;
-
   overflow: hidden;
 
   color: #172033;
-
   background: rgba(255, 255, 255, 0.8);
 
   border: 1px solid #e0e7f0;
-
   border-radius: 22px;
 
   box-shadow: 0 10px 30px rgba(28, 47, 79, 0.06);
@@ -406,8 +354,7 @@
     border-color 0.3s ease;
 }
 
-
-/* CARD BACKGROUND CIRCLE */
+/* TOP RIGHT DECORATION */
 
 .preview-card::before {
   content: "";
@@ -417,8 +364,8 @@
   width: 150px;
   height: 150px;
 
-  top: -70px;
   right: -70px;
+  top: -70px;
 
   border-radius: 50%;
 
@@ -439,12 +386,9 @@
   transform: scale(1.6);
 }
 
+/* CARD NUMBER */
 
-/* =========================================
-   CARD NUMBER
-========================================= */
-
-.card-number {
+.preview-card > span {
   position: relative;
   z-index: 1;
 
@@ -456,18 +400,19 @@
   font-weight: 800;
 }
 
+/* CARD CONTENT */
 
-/* =========================================
-   CARD CONTENT
-========================================= */
-
-.card-content {
+.preview-card > div:not(.card-arrow) {
   position: relative;
   z-index: 1;
 
   width: 100%;
 
-  padding-right: 85px;
+  /*
+    Keeps text away from arrow
+    on smaller desktop screens
+  */
+  padding-right: 70px;
 
   box-sizing: border-box;
 }
@@ -492,8 +437,10 @@
 }
 
 .preview-card p {
-  max-width: 100%;
+  position: relative;
+  z-index: 1;
 
+  max-width: 100%;
   margin: 14px 0 0;
 
   color: #7b8798;
@@ -504,84 +451,195 @@
   line-height: 1.65;
 }
 
-
 /* =========================================
    CARD SVG ARROW
 ========================================= */
 
-.card-arrow {
+.preview-card .card-arrow {
   position: absolute;
   z-index: 2;
 
-  right: 28px;
-  bottom: 28px;
+  right: 26px;
+  bottom: 26px;
 
-  width: 62px;
-  height: 62px;
+  width: 54px;
+  height: 54px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
-
   color: #ffffff;
-
   background: #172033;
 
   border-radius: 50%;
+
+  flex-shrink: 0;
 
   transition:
     transform 0.3s ease,
     background 0.3s ease;
 }
 
-.card-arrow svg {
+.preview-card .card-arrow svg {
+  width: 22px;
+  height: 22px;
+
   display: block;
 
-  width: 24px;
-  height: 24px;
+  stroke: currentColor;
 }
 
 .preview-card:hover .card-arrow {
-  transform: rotate(45deg);
-
+  transform: translateY(-3px);
   background: #2563eb;
 }
 
+/* =========================================
+   GENERIC PAGES
+========================================= */
+
+.page-section {
+  width: min(1100px, 90%);
+  min-height: 65vh;
+
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.page-eyebrow {
+  margin-bottom: 18px;
+
+  color: #2563eb;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.page-section h1 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.page-section h1 span {
+  color: #2563eb;
+}
+
+.page-section > p:not(.page-eyebrow) {
+  max-width: 700px;
+
+  margin-top: 28px;
+
+  color: #667085;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+.page-actions {
+  margin-top: 32px;
+}
+
+.contact-email {
+  display: inline-block;
+
+  margin-top: 35px;
+
+  color: #2563eb;
+
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 700;
+
+  text-decoration: none;
+}
 
 /* =========================================
    TABLET
 ========================================= */
 
 @media (max-width: 1100px) {
-  .landing-page {
-    padding-top: 65px;
+  .landing-preview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
   }
 
   .preview-card {
     min-height: 280px;
   }
-
-  .card-content {
-    padding-right: 80px;
-  }
 }
 
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .landing-page {
+    padding-top: 65px;
+  }
+
+  .landing-preview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    max-width: none;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .preview-card {
+    min-height: 260px;
+  }
+
+  .site-footer {
+    flex-wrap: wrap;
+  }
+}
 
 /* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width: 640px) {
+  .navbar-wrapper {
+    padding: 14px 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    min-height: 48px;
+  }
+
+  .nav-button {
+    padding: 10px 14px;
+
+    font-size: 0.82rem;
+  }
+
   .landing-page {
     min-height: auto;
 
     padding: 70px 5% 45px;
   }
 
+  /*
+    Reduced mobile hero size
+  */
+
   .landing-content h1 {
-    font-size: clamp(3.2rem, 15vw, 5rem);
+    font-size: clamp(3rem, 14vw, 4.2rem);
 
     letter-spacing: -0.07em;
   }
@@ -601,15 +659,17 @@
   }
 
   .landing-actions {
-    flex-direction: column;
-
     margin-top: 28px;
+
+    flex-direction: column;
   }
 
   .primary-button,
   .secondary-button {
     width: 100%;
   }
+
+  /* STATS */
 
   .landing-stats {
     gap: 14px;
@@ -625,12 +685,14 @@
     border-right: none;
   }
 
+  /* MOBILE CARDS */
+
   .landing-preview {
     grid-template-columns: 1fr;
 
-    gap: 16px;
-
     margin-top: 45px;
+
+    gap: 16px;
   }
 
   .preview-card {
@@ -641,15 +703,15 @@
     border-radius: 18px;
   }
 
-  .card-content {
-    padding-right: 75px;
+  .preview-card > div:not(.card-arrow) {
+    padding-right: 65px;
   }
 
   .preview-card p {
     font-size: 0.82rem;
   }
 
-  .card-arrow {
+  .preview-card .card-arrow {
     right: 22px;
     bottom: 22px;
 
@@ -657,61 +719,96 @@
     height: 54px;
   }
 
-  .card-arrow svg {
-    width: 21px;
-    height: 21px;
+  .page-section {
+    width: 90%;
+
+    padding: 70px 0;
+  }
+
+  .site-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
   }
 }
 
-
 /* =========================================
-   SMALL MOBILE
+   SKILLS TABLET
 ========================================= */
 
-@media (max-width: 400px) {
-  .landing-content h1 {
-    font-size: 3.1rem;
+@media (max-width: 850px) {
+  .skills-categories {
+    grid-template-columns: 1fr;
   }
 
-  .preview-card {
-    min-height: 240px;
-  }
-
-  .card-content {
-    padding-right: 68px;
-  }
-
-  .card-arrow {
-    width: 50px;
-    height: 50px;
-
-    right: 18px;
-    bottom: 18px;
+  .skill-category:last-child {
+    grid-column: span 1;
   }
 }
 
-
 /* =========================================
-   LARGE DESKTOP
+   SKILLS MOBILE
 ========================================= */
 
-@media (min-width: 1450px) {
-  .landing-preview {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+@media (max-width: 640px) {
+  .skills-page {
+    width: 90%;
 
-    gap: 24px;
+    padding: 70px 0 80px;
   }
 
-  .preview-card {
-    min-height: 370px;
+  .skills-hero {
+    margin-bottom: 45px;
   }
 
-  .card-content {
-    padding-right: 0;
+  .skills-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4.5rem);
   }
 
-  .card-arrow {
-    right: 28px;
-    bottom: 28px;
+  .skill-category {
+    padding: 24px 16px;
+
+    border-radius: 20px;
   }
+
+  .skill-category h2 {
+    margin-bottom: 22px;
+  }
+
+  .skill-items {
+    gap: 10px;
+  }
+
+  .skill-item {
+    min-width: auto;
+
+    padding: 11px 13px;
+
+    gap: 8px;
+  }
+
+  .skill-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .skill-name {
+    font-size: 0.82rem;
+  }
+}
+
+/* =========================================
+   TEXT SKILL ICON
+========================================= */
+
+.text-skill-icon {
+  width: 26px;
+  height: 26px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.1rem;
+  font-weight: 800;
 }
