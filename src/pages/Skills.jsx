@@ -17,6 +17,8 @@ import {
   SiFigma,
 } from "react-icons/si";
 
+import "./Skills.css";
+
 function Skills() {
  const skillCategories = [
   {

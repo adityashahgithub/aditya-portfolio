@@ -6,6 +6,7 @@ import {
   Layers3,
 } from "lucide-react";
 
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import "./About.css";
 
 function About() {
@@ -199,28 +200,28 @@ function About() {
           </h2>
 
           <div className="about-connect-actions">
-            <a
-              href="https://github.com/adityashahgithub"
-              target="_blank"
-              rel="noreferrer"
-              className="about-github-button"
-            >
-            <span className="social-icon">⌘</span>
+              <a
+                href="https://github.com/adityashahgithub"
+                target="_blank"
+                rel="noreferrer"
+                className="about-github-button"
+              >
+                <FaGithub />
                 GitHub
-            <ArrowUpRight size={17} />
-            </a>
+                <ArrowUpRight size={17} />
+              </a>
 
-            <a
-              href="https://www.linkedin.com/in/aditya-shah-032b76245"
-              target="_blank"
-              rel="noreferrer"
-              className="about-linkedin-button"
-            >
-              <span className="social-icon">in</span>
-              LinkedIn
-              <ArrowUpRight size={17} />
-            </a>
-          </div>
+              <a
+                href="https://www.linkedin.com/in/aditya-shah-032b76245"
+                target="_blank"
+                rel="noreferrer"
+                className="about-linkedin-button"
+              >
+                <FaLinkedin />
+                LinkedIn
+                <ArrowUpRight size={17} />
+              </a>
+            </div>
         </motion.div>
       </section>
     </main>

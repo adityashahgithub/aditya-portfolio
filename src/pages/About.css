@@ -417,22 +417,16 @@
   box-shadow: 0 13px 28px rgba(37, 99, 235, 0.3);
 }
 
-
-/* ============================= */
-/* SOCIAL ICON */
-/* ============================= */
-
-.social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  font-size: 1rem;
-  font-weight: 800;
-  line-height: 1;
+.about-github-button svg,
+.about-linkedin-button svg {
+  flex-shrink: 0;
 }
 
+.about-github-button > svg:first-child,
+.about-linkedin-button > svg:first-child {
+  width: 19px;
+  height: 19px;
+}
 
 /* ============================= */
 /* TABLET */
@@ -605,3 +599,4 @@
     width: 100%;
   }
 }
+
