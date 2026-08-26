@@ -287,8 +287,13 @@ main {
   margin-top: 36px;
 }
 
+/* =========================
+   HERO BUTTONS
+========================= */
+
 .primary-button,
-.secondary-button {
+.secondary-button,
+.resume-button {
   min-height: 52px;
 
   display: inline-flex;
@@ -307,7 +312,8 @@ main {
     transform 0.25s ease,
     box-shadow 0.25s ease,
     background 0.25s ease,
-    color 0.25s ease;
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .primary-button {
@@ -318,6 +324,23 @@ main {
 .primary-button:hover {
   transform: translateY(-3px);
   background: #2f80ed;
+  box-shadow: 0 15px 30px rgba(47, 128, 237, 0.2);
+}
+
+/* DOWNLOAD RESUME BUTTON */
+
+.resume-button {
+  color: #2f80ed;
+  background: #ffffff;
+
+  border: 1px solid rgba(47, 128, 237, 0.28);
+}
+
+.resume-button:hover {
+  color: #ffffff;
+  background: #2f80ed;
+
+  transform: translateY(-3px);
   box-shadow: 0 15px 30px rgba(47, 128, 237, 0.2);
 }
 
@@ -951,7 +974,8 @@ main {
   }
 
   .primary-button,
-  .secondary-button {
+  .secondary-button,
+  .resume-button {
     width: 100%;
   }
 
