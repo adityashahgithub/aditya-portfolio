@@ -44,7 +44,22 @@ function Navbar() {
           </a>
 
           <Link to="/contact" className="nav-button">
-            Let's Talk <span>↗</span>
+            Let's Talk
+
+              <span className="nav-arrow">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7H17V17" />
+                </svg>
+              </span>
           </Link>
 
           {/* MOBILE MENU BUTTON */}

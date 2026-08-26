@@ -405,3 +405,14 @@
     padding: 18px 0;
   }
 }
+
+.nav-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.nav-arrow svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}

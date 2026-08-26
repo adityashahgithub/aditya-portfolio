@@ -93,8 +93,22 @@ function Home() {
         {/* ACTION BUTTONS */}
         <div className="landing-actions">
           <Link to="/projects" className="primary-button">
-            Explore My Work
-            <span>↗</span>
+            <span>Explore My Work</span>
+
+            <span className="button-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17L17 7" />
+                <path d="M7 7H17V17" />
+              </svg>
+            </span>
           </Link>
 
           <Link to="/about" className="secondary-button">
@@ -163,9 +177,11 @@ function Home() {
               to={card.link}
               className={`preview-card ${card.className}`}
             >
-              <span>{card.number}</span>
+              <span className="card-number">
+                {card.number}
+              </span>
 
-              <div>
+              <div className="card-content">
                 <small>{card.label}</small>
 
                 <h3>{card.title}</h3>
@@ -173,7 +189,20 @@ function Home() {
                 <p>{card.description}</p>
               </div>
 
-              <b>↗</b>
+              <span className="card-arrow">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7H17V17" />
+                </svg>
+              </span>
             </Link>
           </motion.div>
         ))}
