@@ -37,3 +37,8 @@ a {
 .page-content {
   min-height: calc(100vh - 78px);
 }
+
+
+.app { min-height: 100vh; background: #fff; }
+.page-content { min-height: calc(100vh - 78px); }
+main { outline: none; }

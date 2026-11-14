@@ -288,3 +288,22 @@
     flex-basis: 100%;
   }
 }
+
+
+/* SKILLS */
+.skills-page { min-height: 70vh; padding: 100px 0 120px; color: #14213a; background: linear-gradient(180deg,#f8faff 0%,#fff 42%); }
+.skills-hero { width: min(1180px,calc(100% - 72px)); margin: 0 auto 62px; }
+.skills-hero .page-eyebrow { color: #3568e8; font-size: .7rem; font-weight: 800; letter-spacing: .16em; }
+.skills-hero h1 { margin: 20px 0; color: #14213a; font: 800 clamp(3rem,6vw,5.4rem)/1.02 "Manrope",sans-serif; letter-spacing: -.07em; }
+.skills-hero h1 span { color: #3568e8; }
+.skills-hero > p:last-child { max-width: 610px; color: #6b7990; font-size: 1rem; line-height: 1.85; }
+.skills-categories { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; width: min(1180px,calc(100% - 72px)); margin: 0 auto; }
+.skill-category { padding: 28px; border: 1px solid #e3eaf4; border-radius: 18px; background: #fff; box-shadow: 0 8px 26px rgba(31,56,100,.035); }
+.skill-category h2 { margin: 0 0 23px; color: #1a2b47; font: 750 1.05rem "Manrope",sans-serif; letter-spacing: -.025em; }
+.skill-items { display: flex; flex-wrap: wrap; gap: 11px; }
+.skill-item { display: flex; align-items: center; gap: 10px; min-height: 47px; padding: 10px 13px; border: 1px solid #e8edf5; border-radius: 11px; background: #fbfcff; transition: .2s ease; }
+.skill-item:hover { border-color: #c7d6f3; background: #f4f7ff; box-shadow: 0 7px 17px rgba(53,104,232,.07); }
+.skill-icon { display: inline-grid; place-items: center; font-size: 1.15rem; }
+.skill-name { color: #53637c; font-size: .8rem; font-weight: 700; }
+.text-skill-icon { display: inline-grid; place-items: center; width: 19px; height: 19px; border-radius: 5px; color: #fff; background: #e58a28; font-size: .75rem; font-weight: 800; }
+@media(max-width:760px) { .skills-page { padding: 75px 0 85px; } .skills-hero,.skills-categories { width: calc(100% - 42px); } .skills-categories { grid-template-columns: 1fr; } .skills-hero h1 { font-size: clamp(2.8rem,11vw,4rem); } .skill-category { padding: 23px; } }
