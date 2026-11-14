@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 import {
@@ -13,14 +14,57 @@ import {
   SiExpress,
   SiNodedotjs,
   SiGithub,
+  SiOpencv,
+  SiTensorflow,
+  SiNumpy,
+  SiScikitlearn,
 } from "react-icons/si";
 
 import "./Projects.css";
+
+// Custom Matplotlib-style chart icon
+function MatplotlibIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M3 3v18h18" />
+      <path d="m7 14 4-4 3 3 6-7" />
+    </svg>
+  );
+}
 
 function Projects() {
   const projects = [
     {
       number: "01",
+      title: "RoadGuard AI",
+      category: "AI & Computer Vision",
+      description:
+        "An AI-powered road damage analysis project that uses image processing and a Convolutional Neural Network (CNN) to classify road image patches as potholes or background. Achieved 90.39% test accuracy, 89.84% precision, 95.77% recall, and a 92.71% F1-score.",
+      image: "/projects/roadguard-ai.png",
+      github:
+        "https://github.com/adityashahgithub/RoadGuard-AI-Smart-Road-Damage-Detection-and-Assessment-System",
+      tech: [
+        { name: "Python", icon: <SiPython /> },
+        { name: "OpenCV", icon: <SiOpencv /> },
+        { name: "TensorFlow", icon: <SiTensorflow /> },
+        { name: "NumPy", icon: <SiNumpy /> },
+        { name: "Matplotlib", icon: <MatplotlibIcon /> },
+        { name: "Scikit-learn", icon: <SiScikitlearn /> },
+      ],
+    },
+
+    {
+      number: "02",
       title: "FiscalPoint",
       category: "Financial Management System",
       description:
@@ -28,27 +72,15 @@ function Projects() {
       image: "/projects/fiscalpoint.png",
       github: "https://github.com/adityashahgithub/FiscalPoint",
       tech: [
-        {
-          name: "Python",
-          icon: <SiPython />,
-        },
-        {
-          name: "PHP",
-          icon: <SiPhp />,
-        },
-        {
-          name: "MySQL",
-          icon: <SiMysql />,
-        },
-        {
-          name: "JavaScript",
-          icon: <SiJavascript />,
-        },
+        { name: "Python", icon: <SiPython /> },
+        { name: "PHP", icon: <SiPhp /> },
+        { name: "MySQL", icon: <SiMysql /> },
+        { name: "JavaScript", icon: <SiJavascript /> },
       ],
     },
 
     {
-      number: "02",
+      number: "03",
       title: "Hyundai Website Clone",
       category: "Responsive Front-End Website",
       description:
@@ -56,27 +88,15 @@ function Projects() {
       image: "/projects/hyundai.png",
       github: "https://github.com/adityashahgithub/Hyundai-Website",
       tech: [
-        {
-          name: "HTML",
-          icon: <SiHtml5 />,
-        },
-        {
-          name: "CSS",
-          icon: <SiCss />,
-        },
-        {
-          name: "JavaScript",
-          icon: <SiJavascript />,
-        },
-        {
-          name: "Bootstrap",
-          icon: <SiBootstrap />,
-        },
+        { name: "HTML", icon: <SiHtml5 /> },
+        { name: "CSS", icon: <SiCss /> },
+        { name: "JavaScript", icon: <SiJavascript /> },
+        { name: "Bootstrap", icon: <SiBootstrap /> },
       ],
     },
 
     {
-      number: "03",
+      number: "04",
       title: "Invenzaa",
       category: "Medicine Inventory Management System",
       description:
@@ -84,28 +104,17 @@ function Projects() {
       image: "/projects/invenzaa.png",
       github: "https://github.com/adityashahgithub/Invenzaa",
       tech: [
-        {
-          name: "MongoDB",
-          icon: <SiMongodb />,
-        },
-        {
-          name: "Express",
-          icon: <SiExpress />,
-        },
-        {
-          name: "React",
-          icon: <SiReact />,
-        },
-        {
-          name: "Node.js",
-          icon: <SiNodedotjs />,
-        },
+        { name: "MongoDB", icon: <SiMongodb /> },
+        { name: "Express", icon: <SiExpress /> },
+        { name: "React", icon: <SiReact /> },
+        { name: "Node.js", icon: <SiNodedotjs /> },
       ],
     },
   ];
 
   return (
     <main className="projects-page">
+
       {/* HERO */}
       <section className="projects-hero">
         <motion.div
@@ -114,7 +123,6 @@ function Projects() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          {/* BACK TO HOME */}
           <a href="/" className="back-home">
             ← Back to home
           </a>
@@ -138,6 +146,7 @@ function Projects() {
       {/* PROJECT LIST */}
       <section className="projects-showcase">
         <div className="projects-container">
+
           {projects.map((project, index) => (
             <motion.article
               className={`project-showcase-card ${
@@ -149,7 +158,8 @@ function Projects() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7 }}
             >
-              {/* IMAGE */}
+
+              {/* PROJECT IMAGE */}
               <motion.div
                 className="project-preview"
                 whileHover={{ y: -8 }}
@@ -160,6 +170,10 @@ function Projects() {
                     src={project.image}
                     alt={`${project.title} project preview`}
                     className="project-image"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
                   />
                 </div>
 
@@ -170,8 +184,9 @@ function Projects() {
                 </span>
               </motion.div>
 
-              {/* CONTENT */}
+              {/* PROJECT CONTENT */}
               <div className="project-showcase-content">
+
                 <div className="project-meta">
                   <span className="project-index">
                     {project.number}
@@ -204,22 +219,24 @@ function Projects() {
                   ))}
                 </div>
 
-                {/* BUTTON */}
+                {/* GITHUB */}
                 <div className="project-actions">
                   <a
                     href={project.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="project-github-button"
                   >
                     <SiGithub />
                     <span>View Source on GitHub</span>
-                    <span>↗</span>
+                    <span aria-hidden="true">↗</span>
                   </a>
                 </div>
+
               </div>
             </motion.article>
           ))}
+
         </div>
       </section>
 
@@ -240,12 +257,15 @@ function Projects() {
             Always <span>learning.</span>
           </h2>
 
-          {/* CONTACT */}
-          <a href="/#contact" className="projects-contact-button">
+          <a
+            href="/contact"
+            className="projects-contact-button"
+          >
             Let's work together <span>↗</span>
           </a>
         </motion.div>
       </section>
+
     </main>
   );
 }
